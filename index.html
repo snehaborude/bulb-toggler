@@ -8,12 +8,29 @@
 <body>
     <div class="container">
         <h1   class="heading">BULB  TOGGLE</h1>
-        <img src="" alt="off" id="bulb"   height="400px">
+        <img src="img/off.png" alt="off" id="bulb"   height="400px">
         <br> <br>
         <button type="button" onclick="toggleBulb()"    class="button-container">
             Toggle
         </button>
     </div>
-    
+    <script>
+        const bulbElement = document.getElementById('bulb');
+        let state = false;
+
+        function toggleBulb() 
+        {
+            if(state==false)   
+            {
+                bulbElement.src = 'img/on.png';
+                state = true;
+            }  
+            else
+            {
+                bulbElement.src = 'img/off.png';
+                state = false;
+            }
+        }
+    </script>
 </body>
 </html>
